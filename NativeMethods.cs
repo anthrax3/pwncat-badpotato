@@ -13,7 +13,7 @@ using System.Security.Permissions;
 using System.Security.Principal;
 using System.Text;
 
-namespace PingCastle
+namespace tatertot
 {
     public class NativeMethods
     {

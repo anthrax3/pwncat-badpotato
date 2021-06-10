@@ -12,7 +12,7 @@ using System.Security.Permissions;
 using System.Security.Principal;
 using System.Text;
 
-namespace PingCastle.RPC
+namespace tatertot.RPC
 {
     public enum TypeOfEnumeration
     {

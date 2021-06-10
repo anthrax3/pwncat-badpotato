@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace PingCastle.RPC
+namespace tatertot.RPC
 {
     internal class NativeMethods
     {
@@ -24,11 +24,11 @@ namespace PingCastle.RPC
 
 		[DllImport("Rpcrt4.dll", EntryPoint = "NdrClientCall2", CallingConvention = CallingConvention.Cdecl,
 		   CharSet = CharSet.Unicode, SetLastError = false)]
-		internal static extern IntPtr NdrClientCall2x64(IntPtr pMIDL_STUB_DESC, IntPtr formatString, IntPtr intptrServer, int flag, ref PingCastle.RPC.nrpc.NETLOGON_TRUSTED_DOMAIN_ARRAY output);
+		internal static extern IntPtr NdrClientCall2x64(IntPtr pMIDL_STUB_DESC, IntPtr formatString, IntPtr intptrServer, int flag, ref tatertot.RPC.nrpc.NETLOGON_TRUSTED_DOMAIN_ARRAY output);
 		
 		[DllImport("Rpcrt4.dll", EntryPoint = "NdrClientCall2", CallingConvention = CallingConvention.Cdecl,
 		   CharSet = CharSet.Unicode, SetLastError = false)]
-		internal static extern IntPtr NdrClientCall2x64(IntPtr pMIDL_STUB_DESC, IntPtr formatString, IntPtr intptrSystemName, ref PingCastle.RPC.lsa.LSAPR_OBJECT_ATTRIBUTES objectAttributes, UInt32 DesiredAccess, out IntPtr PolicyHandle);
+		internal static extern IntPtr NdrClientCall2x64(IntPtr pMIDL_STUB_DESC, IntPtr formatString, IntPtr intptrSystemName, ref tatertot.RPC.lsa.LSAPR_OBJECT_ATTRIBUTES objectAttributes, UInt32 DesiredAccess, out IntPtr PolicyHandle);
 
 		[DllImport("Rpcrt4.dll", EntryPoint = "NdrClientCall2", CallingConvention = CallingConvention.Cdecl,
 		   CharSet = CharSet.Unicode, SetLastError = false)]
@@ -36,7 +36,7 @@ namespace PingCastle.RPC
 
 		[DllImport("Rpcrt4.dll", EntryPoint = "NdrClientCall2", CallingConvention = CallingConvention.Cdecl,
 		   CharSet = CharSet.Unicode, SetLastError = false)]
-		internal static extern IntPtr NdrClientCall2x64(IntPtr pMIDL_STUB_DESC, IntPtr formatString, IntPtr PolicyHandle, PingCastle.RPC.lsa.LSAPR_SID_ENUM_BUFFER enumBuffer, out IntPtr IntPtrReferencedDomains, IntPtr IntPtrTranslatedNames, UInt32 LookupLevel, out UInt32 MappedCount);
+		internal static extern IntPtr NdrClientCall2x64(IntPtr pMIDL_STUB_DESC, IntPtr formatString, IntPtr PolicyHandle, tatertot.RPC.lsa.LSAPR_SID_ENUM_BUFFER enumBuffer, out IntPtr IntPtrReferencedDomains, IntPtr IntPtrTranslatedNames, UInt32 LookupLevel, out UInt32 MappedCount);
 
 		[DllImport("Rpcrt4.dll", EntryPoint = "NdrClientCall2", CallingConvention = CallingConvention.Cdecl,
 		   CharSet = CharSet.Unicode, SetLastError = false)]
@@ -48,7 +48,7 @@ namespace PingCastle.RPC
 
 		[DllImport("Rpcrt4.dll", EntryPoint = "NdrClientCall2", CallingConvention = CallingConvention.Cdecl,
 		   CharSet = CharSet.Unicode, SetLastError = false)]
-		internal static extern IntPtr NdrClientCall2x64(IntPtr pMIDL_STUB_DESC, IntPtr formatString, IntPtr ServerHandle, PingCastle.NativeMethods.UNICODE_STRING NameString, out IntPtr sid);
+		internal static extern IntPtr NdrClientCall2x64(IntPtr pMIDL_STUB_DESC, IntPtr formatString, IntPtr ServerHandle, tatertot.NativeMethods.UNICODE_STRING NameString, out IntPtr sid);
 
 		[DllImport("Rpcrt4.dll", EntryPoint = "NdrClientCall2", CallingConvention = CallingConvention.Cdecl,
 		   CharSet = CharSet.Unicode, SetLastError = false)]

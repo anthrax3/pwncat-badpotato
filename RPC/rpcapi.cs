@@ -12,7 +12,7 @@ using System.Runtime.InteropServices;
 using System.Security.Permissions;
 using System.Text;
 
-namespace PingCastle.RPC
+namespace tatertot.RPC
 {
     public abstract class rpcapi
     {

@@ -13,7 +13,7 @@ using System.Security.Permissions;
 using System.Security.Principal;
 using System.Text;
 
-namespace PingCastle.RPC
+namespace tatertot.RPC
 {
 
     [DebuggerDisplay("{Name}")]
@@ -294,7 +294,7 @@ namespace PingCastle.RPC
             IntPtr result = IntPtr.Zero;
             DomainId = null;
             IntPtr sid = IntPtr.Zero;
-			using (var NameString = new PingCastle.NativeMethods.UNICODE_STRING())
+			using (var NameString = new tatertot.NativeMethods.UNICODE_STRING())
 			{
 				try
 				{
