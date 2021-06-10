@@ -175,27 +175,6 @@ class Plugin
         goto seven;
     }
 
-    class InternalProtocolError : Exception
-    {
-        public InternalProtocolError(int code, string message)
-        {
-
-        }
-    }
-
-    public static void Main(string[] args)
-    {
-        ProtocolErrorType = typeof(InternalProtocolError);
-
-        IntPtr hToken = new IntPtr(get_system_token());
-        System.Console.WriteLine("got token: " + hToken.ToString());
-
-        using (WindowsIdentity.Impersonate(hToken))
-        {
-            System.Console.WriteLine("current user: " + WindowsIdentity.GetCurrent(true).Name);
-        }
-    }
-
     [DllImport("advapi32.dll", SetLastError = true)]
     public static extern bool SetThreadToken(IntPtr pHandle, IntPtr hToken);
     [SecurityCritical]
