@@ -1,14 +1,10 @@
 # BadPotato
 
-Windows 2012-2019
+Forked from [here](https://github.com/BeichenDream/BadPotato). Modified to act as a [pwncat-windows-c2](https://github.com/calebstewart/pwncat-windows-c2) plugin, and also not trigger Windows Defender when loaded reflectively.
 
+BadPotato leaks a system token handle through the MS RPN API, which can be used to get `NT AUTHORITY\SYSTEM` access if you have the `SeImpersonatePrivilege`.
 
-Windows 8-10
-
-![](https://raw.githubusercontent.com/BeichenDream/BadPotato/master/screen.png)
-
-## 引用
-
+# Upstream Sources
 
 [https://github.com/vletoux/pingcastle](https://github.com/vletoux/pingcastle "pingcastle")
 
