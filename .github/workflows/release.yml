@@ -1,0 +1,33 @@
+﻿# Automate releases for badpotato
+name: publish
+on:
+  release:
+    types: [published]
+jobs:
+  release:
+    name: Release
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.0.2
+      - name: Build
+        shell: bash
+        run: |
+          tag=$(git describe --tags --abbrev=0)
+          
+          msbuild.exe /property:Configuration=Debug BadPotato.sln
+          
+          cp bin/Debug/BadPotato.dll "BadPotato.dll"
+          tar czvf "pwncat-badpotato-$tag.tar.gz" "BadPotato.dll"
+
+          rm -f BadPotato.dll
+
+      - name: Publish
+        uses: softprops/action-gh-release@v1
+        with:
+          files: "pwncat-badpotato-*.tar.gz"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+

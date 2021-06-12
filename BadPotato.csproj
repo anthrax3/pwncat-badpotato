@@ -49,6 +49,7 @@
     <Compile Include="RPC\spool.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".github\workflows\release.yml" />
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
